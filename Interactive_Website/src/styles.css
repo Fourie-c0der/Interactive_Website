@@ -1,0 +1,279 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to right, white , lightblue); 
+  background-size: 100% 100%; 
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  line-height: 1.0;
+  color: black;
+  font-size: larger;
+}
+
+img{
+  margin-left: 20px;
+  height: 60px;
+  width: 60px;
+}
+
+header {
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav li {
+  margin: 20px;
+  margin-right: 20px;
+}
+
+header nav a {
+  font-size: 1.5em;
+  position: relative;
+  color: black;
+  text-decoration: none;
+  transition: .5s;
+  padding: 8px 25px;
+}
+
+header nav a:hover {
+  color: #ff9f21;
+}
+
+nav a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  z-index: -1;
+  border-bottom: 3px solid orange;
+  border-radius: 15px;
+  transform: scale(0) translateY(50px);
+  opacity: 0;
+  transition: .5s;
+}
+
+nav a:hover span{
+  transform: scale(1) translateY(0px);
+  opacity: 1;
+}
+
+hr{
+  padding:4px;
+  background:black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 40%;
+  height: fit-content;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-up {
+  animation: fade-up 1s ease-in-out forwards;
+}
+
+@keyframes fade-up {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.courses ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.courses li {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.courses li:last-child {
+  border-bottom: none;
+}
+
+
+
+.enroll-form-container {
+  background-color: transparent;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+select{
+  margin-bottom: 10px;
+}
+
+#course{
+  /* margin-top: 8px; */
+  width: 190px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+  background-color: #c6efce; 
+  border-color: #8bc34a; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#enrollButton {
+  background-color: orange;
+  color: #fff;
+  padding: 20px 80px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+
+#enrollButton:hover {
+  background-color: #3e8e41;
+}
+
+
+
+#CourseButton{
+  height: 40px;
+  width: 200px;
+  border: white 2px;
+  border-radius: 3px;
+  background-color: lightblue;
+  cursor: pointer;
+  transition-duration: 500ms;
+}
+
+#CourseButton:hover{
+  background-color: orange;
+  color: white;
+}
+
+#create-content{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  justify-content: center;
+  background-color:transparent;
+  color: black;
+  border: #7e7e7e solid 2px;
+  border-radius: 10px;
+  transition-duration: 1000ms; 
+  margin-left: 350px;
+  margin-right: 350px;
+  opacity: 0;
+}
+
+.heading{
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.heading a{
+  color: black; 
+  text-decoration: underline;
+  transition-duration: 500ms;
+}
+
+.heading a:hover{
+  color: grey;
+  text-decoration: none;
+}
+
+#create-content.show {
+  animation: fadeIn 0.5s forwards; 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

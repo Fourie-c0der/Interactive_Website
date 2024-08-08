@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll in a course</title>
+    <link rel="stylesheet" type="text/css" href="src/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <img src="addOns/images/bc logo.png" alt="bc logo">
+                <li><a href="index.html">Home<span></span></a></li>
+                <li><a href="search.html">Search<span></span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <h1>Enroll in a course</h1>
+        <div class="enroll-form-container">
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" required><br><br>
+                <label for="course">Course:</label>
+                <select for="course" id="course" required>
+                    <option value="bcomp">Bacholers of Computing</option>
+                    <option value="bit">Bacholers of Information Technology</option>
+                    <option value="dit">Diploma in Information Technology </option>
+                    <option value="cert">Higher Certificate</option>
+                </select>
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="dob">Date of birth:</label>
+                <input type="date" id="dob" name="dob" required><br><br>
+                <label for="highschool">High school attended:</label>
+                <input type="text" id="highschool" name="highschool" required><br><br>
+                <label for="gradyear">Year graduated:</label>
+                <input type="number" id="gradyear" name="gradyear" required><br><br>
+                <button id="enrollButton">Submit</button>
+            </form>
+        </div>
+    </main>
+    <script src="src/enroll.js"></script>
+</body>
+</html>
